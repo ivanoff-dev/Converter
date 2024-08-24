@@ -27,7 +27,7 @@ int main(int argc, char **argv)
                 utf8_symbol[1] = symbol - 0x30;
                 fwrite(utf8_symbol, sizeof(utf8_symbol), 1, output_file);
             }
-            else if (symbol >= 240 && symbol <= 255)
+            else if (symbol >= 240)
             {
                 utf8_symbol[0] = 0xD1;
                 utf8_symbol[1] = symbol - 0x70;
